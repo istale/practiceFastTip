@@ -30,6 +30,14 @@
             tipPercent = parseFloat(tipPercentSetting);
         }
         $('#tipPercentage').val(tipPercent);
+
+        $('.myForm').on('submit',function(event){
+            event.preventDefault(); // cancel default form submit 
+            // run your desired behaviour here... 
+            return false; 
+        });
+
+
     });
 
     $( document ).on( "deviceready", function(){

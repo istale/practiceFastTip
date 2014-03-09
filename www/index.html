@@ -19,7 +19,9 @@
         <form>
             <div data-role="fieldcontain">
                 <label for="billAmount">Bill Amount:</label>
-                <input type="number" name="billAmount" id="billAmount" data-clear-btn="true" maxlength="3" value="" placeholder="Enter amount here">
+                <form class="myForm">
+                    <input type="number" name="billAmount" id="billAmount" data-clear-btn="true" maxlength="3" value="" placeholder="Enter amount here">
+                </form>
             </div>
             <p style="text-align: center;">
                 <a href="#" id="calcTip" data-role="button" data-icon="check">Calculate Tip</a>
@@ -41,7 +43,7 @@
         <h1>FasTip - Settings</h1>
     </div>
     <div data-role="content" class="">
-        <form>
+        <form class="myForm">
             <input type="number" name="tipPercentage" id="tipPercentage" value="" placeholder="Tip Percentage">
             <p style="text-align: center;">
                 <a href="#" id='saveSettings' data-role="button" data-inline="true" data-icon="check">Save</a>
