@@ -22,6 +22,10 @@
         }
     };
 
+    function cancelSubmit() {
+        return false;
+    };
+
     $( document ).on( "ready", function(){
         $('#calcTip').on('click', calcTip);
         $('#saveSettings').on('click', saveSettings);
@@ -31,11 +35,11 @@
         }
         $('#tipPercentage').val(tipPercent);
 
-        $('.myForm').on('submit',function(event){
-            event.preventDefault(); // cancel default form submit 
-            // run your desired behaviour here... 
-            return false; 
-        });
+        // $('.myForm').on('submit',function(event){
+        //     event.preventDefault(); // cancel default form submit 
+        //     // run your desired behaviour here... 
+        //     return false; 
+        // });
 
 
     });
