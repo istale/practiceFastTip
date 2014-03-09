@@ -23,6 +23,7 @@
     };
 
     function cancelSubmit() {
+        navigator.notification.alert("I am in onSubmit.", function(){},);
         return false;
     };
 
