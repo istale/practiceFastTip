@@ -9,6 +9,7 @@
         var totalAmt = billAmt + tipAmt;
         $('#tipAmount').text('$' + tipAmt.toFixed(2));
         $('#totalAmount').text('$' + totalAmt.toFixed(2));
+        console.log("calcTip ok");
     };
 
     var saveSettings = function() {
@@ -22,11 +23,6 @@
         }
     };
 
-    function cancelSubmit() {
-        navigator.notification.alert("I am in onSubmit.", function(){});
-        return false;
-    };
-
     $( document ).on( "ready", function(){
         $('#calcTip').on('click', calcTip);
         $('#saveSettings').on('click', saveSettings);
@@ -36,11 +32,14 @@
         }
         $('#tipPercentage').val(tipPercent);
 
-        // $('.myForm').on('submit',function(event){
-        //     event.preventDefault(); // cancel default form submit 
-        //     // run your desired behaviour here... 
-        //     return false; 
-        // });
+        $('#billAmount').on('keypress', function(e){
+                if (e.which == 13){
+                    e.preventDefault();
+                    console.log("okokok");
+                    calcTip();
+                    return false;
+                }
+        });
 
 
     });
